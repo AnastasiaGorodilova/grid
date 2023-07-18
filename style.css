@@ -1,21 +1,10 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-
-}
-
 .container {
     display: grid;
-    width: 100%;
-    height: 600px;
-    grid-template-columns: [main-start content-start] 1fr [content-end aside-start] 30% [aside-end main-end];
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: [main-start content-start] 1fr [content-end aside-start] 30vw [aside-end main-end];
     ;
-    grid-template-rows: [row1-start] 80px [row2-start] 1fr [row3-start] 100px [row3-end];
+    grid-template-rows: [row1-start] 10vh [row2-start] 1fr [row3-start] 15vh [row3-end];
     ;
     gap: 0;
 }
@@ -34,14 +23,13 @@ main {
     grid-column: content-start/content-end;
     grid-row: row2-start/row3-start;
     justify-content: center;
-    padding: 32px 16px 16px;
+    padding: 5vh 2vh 2vh;
 
     /* табличка в табличке */
     display: grid;
     grid-template-rows: 2fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
+    gap: 2vh 4vh;
 }
 
 .main {
@@ -61,29 +49,24 @@ main {
 .main__block1 {
     background-color: navajowhite;
     grid-area: 2/1/2/2;
-
 }
 
 .main__block2 {
     background-color: navajowhite;
     grid-area: 2/2/2/3;
-
 }
 
 .main__block3 {
     background-color: navajowhite;
     grid-area: 3/1/4/3;
-
 }
-
 
 aside {
     background-color: rgb(177, 231, 170);
     grid-column: aside-start/aside-end;
     grid-row: row2-start/row3-start;
     text-align: center;
-    padding: 20px;
-    padding: 32px 10px 16px;
+    padding: 5vh;
 }
 
 footer {
@@ -92,8 +75,8 @@ footer {
     grid-row: row3-start/row3-end;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 16px;
-    gap: 5vw;
+    padding: 2vh;
+    gap: 5vh;
 
 
 }
