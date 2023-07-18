@@ -1,89 +1,12 @@
 .container {
     display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: [main-start content-start] 1fr [content-end aside-start] 30vw [aside-end main-end];
-    ;
-    grid-template-rows: [row1-start] 10vh [row2-start] 1fr [row3-start] 15vh [row3-end];
-    ;
-    gap: 0;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: repeat(2, 400px);
 }
 
-header {
-    display: grid;
-    background-color: lightgrey;
-    grid-column: main-start/main-end;
-    grid-row: row1-start/row2-start;
-    justify-content: center;
-    align-items: center;
-}
-
-main {
-    background-color: papayawhip;
-    grid-column: content-start/content-end;
-    grid-row: row2-start/row3-start;
-    justify-content: center;
-    padding: 5vh 2vh 2vh;
-
-    /* табличка в табличке */
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    gap: 2vh 4vh;
-}
-
-.main {
-    grid-area: 1/1/2/3;
-    margin: 0;
-    text-align: center;
-}
-
-.main__block1,
-.main__block2,
-.main__block3 {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-.main__block1 {
-    background-color: navajowhite;
-    grid-area: 2/1/2/2;
-}
-
-.main__block2 {
-    background-color: navajowhite;
-    grid-area: 2/2/2/3;
-}
-
-.main__block3 {
-    background-color: navajowhite;
-    grid-area: 3/1/4/3;
-}
-
-aside {
-    background-color: rgb(177, 231, 170);
-    grid-column: aside-start/aside-end;
-    grid-row: row2-start/row3-start;
-    text-align: center;
-    padding: 5vh;
-}
-
-footer {
-    background-color: lightgrey;
-    grid-column: main-start/main-end;
-    grid-row: row3-start/row3-end;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 2vh;
-    gap: 5vh;
-
-
-}
-
-.footer__block {
-    display: grid;
-    background-color: rgb(239, 239, 239);
-    align-items: center;
-    justify-items: center;
+.container>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
